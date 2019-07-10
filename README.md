@@ -1,4 +1,4 @@
-# Closures lab 1
+# Closures Lab
 
 Fork and clone this repo. On your fork, answer and commit the follow questions. When you are finished, submit the link to your repo on Canvas.
 
@@ -281,21 +281,7 @@ Des Prez, Josquin
 ...etc
 ```
 
-
 ## Question 16
-
-Create a closure that takes an two arrays of strings as input. Output a new string with the contents of the arrays in alternating order and separated by a space. If one array's length is longer than the other's length, append the rest of its contents to the new string.
-
-Example:
-Input:
-```swift
-array1: ["Hello", "My", "Friend"]
-array2: ["Darkness", "Old"]
-```
-Output:  `"Hello Darkness My Old Friend"`
-
-
-## Question 17
 
 a) Write a function called `myFilter` that takes an array of Doubles and a closure as parameters and returns an array of Doubles. The closure should take a Double and return a Bool. The function should apply the closure to the doubles in the array.
 
