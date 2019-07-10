@@ -20,9 +20,9 @@ applyKTimes(3) {
 Output:
 
 ```swift
-We Heart Swift
-We Heart Swift
-We Heart Swift
+Hello Closures!
+Hello Closures!
+Hello Closures!
 ```
 
 
