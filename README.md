@@ -14,7 +14,7 @@ Input:
 
 ```swift
 applyKTimes(3) {
-    print("We Heart Swift")
+    print("Hello Closures!")
 }
 ```
 Output:
