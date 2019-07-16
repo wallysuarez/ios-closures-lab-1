@@ -24,7 +24,16 @@ Hello Closures!
 Hello Closures!
 Hello Closures!
 ```
+```swift
+func applyKTimes(_ k: Int, _ closure: () -> ()) {
+for something in 0..<k {
+closure()
+}
+}
+applyKTimes(3, { print("Hello Closures!") })
 
+
+```
 
 ## Question 2
 
@@ -37,6 +46,12 @@ Input: `let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]`
 
 Expected values: `multiples = [3, 6, 9, 3, 12]`
 
+```swift
+let multiples = numbers.filter { (a) -> Bool in
+    return a % 3 == 0
+}
+print(multiples)
+```
 
 ## Question 3
 
@@ -48,6 +63,13 @@ Input: `let numbers = [4, 7, 1, 9, 6, 5, 6, 9]`
 Output: `9`
 
 
+```swift
+let greatestNum = numbers.reduce(0, {x,y in
+    return x > y ? x : y
+})
+print(greatestNum)
+```
+
 ## Question 4
 
 Join all the strings from `strings` into one using `reduce`. Add spaces in between strings. Print your result.
@@ -58,15 +80,33 @@ Input: `let strings = ["We", "Heart", "Swift"]`
 Output: `"We Heart Swift"`
 
 
+```swift
+let mergedStrings = strings[1..<strings.count].reduce(strings[0]) { $0 + " " + $1 }
+print(mergedStrings)
+```
+
 ## Question 5
 
 `let cities = ["Shanghai", "Beijing", "Delhi", "Lagos", "Tianjin", "Karachi", "Karachi", "Tokyo", "Guangzhou", "Mumbai", "Moscow", "São Paulo"]`
 
 a. Use `sortedBy` to sort `cities` in alphabetical order.
+```swift
+let alphabetical = cities.sorted()
+print(alphabetical)
+```
 
 b. Use `sortedBy` to sort `cities` alphabetical order of the second character of the city name.
+```swift
+
+
+```
 
 c. Use `sortedBy` to sort `cities` in order of the length of the city name.
+```swift
+
+
+```
+
 
 
 ## Question 6
@@ -74,9 +114,17 @@ c. Use `sortedBy` to sort `cities` in order of the length of the city name.
 `let citiesWithPopulation: [(String, Int)] = [("Shanghai", 24256800), ("Beijing", 21516000), ("Delhi", 16787941), ("Lagos", 16060303), ("Tianjin", 15200000), ("Karachi", 14910352), ("Karachi", 14160467), ("Tokyo", 13513734), ("Guangzhou", 13080500), ("Mumbai", 12442373), ("Moscow", 12380664), ("São Paulo", 12038175)]`
 
 a. Use `sortedBy` to sort `citiesWithPopulation` in ascending order of population.
+```swift
+
+
+```
+
 
 b. Use `sortedBy` to sort `citiesWithPopulation` in reverse alphabetical order of the last character in the city name.
+```swift
 
+
+```
 
 ## Question 7
 
@@ -97,6 +145,11 @@ numbers = [1, 2, 3, 5, 4, 6]
 // 6 has 4 divisors
 
 // [1, 5, 2, 3, 4, 6] would also have been a valid solution
+```
+
+```swift
+
+
 ```
 
 
@@ -120,6 +173,11 @@ Input: `var numbers = [1, 2, 3, 4, 5, 6]`
 Output: `35 // 1 + 9 + 25 -> 35`
 
 
+```swift
+
+
+```
+
 ## Question 9
 
 Implement a function `forEach(array: [Int], _ closure: Int -> ())` that takes an array of integers and a closure and runs the closure for each element of the array.
@@ -142,6 +200,11 @@ Output:
 16
 ```
 
+```swift
+
+
+```
+
 ## Question 10
 
 Implement a function `combineArrays` that takes 2 arrays and a closure that combines 2 Ints into a single Int. The function combines the two arrays into a single array using the provided closure. Assume that the 2 arrays have equal length.
@@ -159,6 +222,10 @@ combineArrays(array1,array2) {
 
 Output: `[5,10,15,12]`
 
+```swift
+
+
+```
 
 ## Question 11
 
