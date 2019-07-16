@@ -91,20 +91,20 @@ print(mergedStrings)
 
 a. Use `sortedBy` to sort `cities` in alphabetical order.
 ```swift
-let alphabetical = cities.sorted()
+let alphabetical = cities.sorted {$0 < $1}
 print(alphabetical)
 ```
 
 b. Use `sortedBy` to sort `cities` alphabetical order of the second character of the city name.
 ```swift
-
-
+let alphabetSecondChar = cities.sorted { $0.dropFirst() < $1.dropFirst() }
+print(alphabetSecondChar)
 ```
 
 c. Use `sortedBy` to sort `cities` in order of the length of the city name.
 ```swift
-
-
+let cityNameLength = cities.sorted { $0.count < $1.count }
+print(cityNameLength)
 ```
 
 
@@ -115,14 +115,15 @@ c. Use `sortedBy` to sort `cities` in order of the length of the city name.
 
 a. Use `sortedBy` to sort `citiesWithPopulation` in ascending order of population.
 ```swift
-
-
+let cityAscendingPop = citiesWithPopulation.sorted(by: { $0.1 < $1.1 })
+print(cityAscendingPop)
 ```
 
 
 b. Use `sortedBy` to sort `citiesWithPopulation` in reverse alphabetical order of the last character in the city name.
 ```swift
-
+let cityPopReverse = citiesWithPopulation.sorted(by: { String($0.0.reversed()) < String($1.0.reversed()) })
+print(cityPopReverse)
 
 ```
 
